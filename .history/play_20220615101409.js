@@ -23,5 +23,4 @@ const net = require("net");
   return conn;
 }; */
 
-console.log("Connecting ...");
 connect();

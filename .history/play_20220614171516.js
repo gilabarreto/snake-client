@@ -1,4 +1,4 @@
-const { connect } = require("./client")
+const connect = require("./client")
 
 const net = require("net");
 
@@ -23,5 +23,4 @@ const net = require("net");
   return conn;
 }; */
 
-console.log("Connecting ...");
 connect();
