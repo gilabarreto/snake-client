@@ -9,8 +9,6 @@ Before you can run this client, you will need to be running the server side whic
 ## Final Product
 
 !["screenshot"](https://github.com/gilabarreto/snake-client/blob/master/screenshot.png)
-!["snake from simpsons"](https://static.wikia.nocookie.net/simpsons/images/b/be/Snake_Jailbird.png/revision/latest?cb=20201222215819)
-
 
 ## Getting Started
 
