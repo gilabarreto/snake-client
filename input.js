@@ -1,3 +1,5 @@
+const { KEY_PRESSES } = require("./constants");
+
 let connection;
 
 const setupInput = (conn) => {
@@ -10,27 +12,17 @@ const setupInput = (conn) => {
   stdin.setEncoding("utf8");
   stdin.resume();
 
+
   // keyboard event handler
   const handleUserInput = function (key) {
+
     // exit key (Ctrl + C)
     if (key === '\u0003') {
       process.exit();
-    } else if (key === 'w') {
+    }
+    else if (KEY_PRESSES[key]) {
       // direction keys
-      conn.write("Move: up")
-    } else if (key === 'a') {
-      conn.write("Move: left");
-    } else if (key === 's') {
-      conn.write("Move: down");
-    } else if (key === 'd') {
-      conn.write("Move: right");
-    } else if (key === '1') {
-      // implement some special keys that send canned messages to the server, for everyone to see. 
-      conn.write("Say: One is ok.");
-    } else if (key === '2') {
-      conn.write("Say: Two is fine");
-    } else if (key === '3') {
-      conn.write("Say: Three is enough!");
+      conn.write(KEY_PRESSES[key])
     }
   }
 
