@@ -1,3 +1,5 @@
+// DESCRIPTION: input file to act as a separate module to handle user input.
+
 const { KEY_PRESSES } = require("./constants");
 
 let connection;
@@ -14,17 +16,16 @@ const setupInput = (conn) => {
 
 
   // keyboard event handler
-  const handleUserInput = function (key) {
+  const handleUserInput = function(key) {
 
     // exit key (Ctrl + C)
     if (key === '\u0003') {
       process.exit();
-    }
-    else if (KEY_PRESSES[key]) {
+    } else if (KEY_PRESSES[key]) {
       // direction keys
-      conn.write(KEY_PRESSES[key])
+      conn.write(KEY_PRESSES[key]);
     }
-  }
+  };
 
   // player nickname
   conn.on("connect", () => {

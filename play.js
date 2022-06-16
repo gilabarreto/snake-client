@@ -1,5 +1,7 @@
-const { connect } = require("./client")
-const { setupInput } = require("./input")
+// DESCRIPTION: play file module to establish the connection.
+
+const { connect } = require("./client");
+const { setupInput } = require("./input");
 
 console.log("Connecting ...");
 const conn = connect();

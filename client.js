@@ -1,8 +1,10 @@
+// DESCRIPTION: setup server and event handler for snake.
+
 const net = require("net");
 const { IP, PORT } = require("./constants");
 
 // establishes a connection with the game server
-const connect = function () {
+const connect = function() {
 
   // connection command
   const conn = net.createConnection({

@@ -1,8 +1,12 @@
+// DESCRIPTION: constants file to export all the constants used in the app.
+
 // player IP
 const IP = "localhost";
 
+// player PORT
 const PORT = "50541";
 
+// keyboard event handler
 const w = "Move: up";
 const s = "Move: down";
 const a = "Move: left";
